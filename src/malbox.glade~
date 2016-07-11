@@ -54,177 +54,85 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
+          <object class="GtkGrid">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
+            <property name="row_homogeneous">True</property>
+            <property name="column_homogeneous">True</property>
             <child>
-              <placeholder/>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <child>
-              <object class="GtkGrid">
+              <object class="GtkLabel" id="detection_box_label">
+                <property name="name">detection_box_label</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="row_homogeneous">True</property>
-                <property name="column_homogeneous">True</property>
-                <child>
-                  <object class="GtkLabel" id="file_box_label">
-                    <property name="name">file_box_label</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">File:</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry" id="file_box">
-                    <property name="name">file_box</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="name_box_label">
-                    <property name="name">name_box_label</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Name in MalBox:</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry" id="name_box">
-                    <property name="name">name_box</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">1</property>
-                  </packing>
-                </child>
+                <property name="label" translatable="yes">Detected as:</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
+                <property name="left_attach">0</property>
+                <property name="top_attach">2</property>
               </packing>
             </child>
             <child>
-              <object class="GtkGrid">
+              <object class="GtkEntry" id="detection_box">
+                <property name="name">detection_box</property>
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Detected as:</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="primary_icon_tooltip_text" translatable="yes">The OS abbrevaition. EX: osX, win32, linux, android.</property>
-                    <property name="secondary_icon_tooltip_text" translatable="yes">The OS abbrevaition. EX: osX, win32, linux, android.</property>
-                    <property name="placeholder_text" translatable="yes">Operating System</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="primary_icon_tooltip_text" translatable="yes">How the malware entered the system. EX: Trojan, Dropper, Phish.</property>
-                    <property name="secondary_icon_tooltip_text" translatable="yes">How the malware entered the system. EX: Trojan, Dropper, Phish.</property>
-                    <property name="placeholder_text" translatable="yes">Behavior</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">2</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="primary_icon_tooltip_text" translatable="yes">What the malware wants to do. EX: Backdoor, Miner, Keylogger.</property>
-                    <property name="secondary_icon_tooltip_text" translatable="yes">What the malware wants to do. EX: Backdoor, Miner, Keylogger.</property>
-                    <property name="placeholder_text" translatable="yes">Goal</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">3</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="primary_icon_tooltip_text" translatable="yes">The name of the virus given to you by your antivirus. EX: Powerliks, Imuler, PVFlocker.</property>
-                    <property name="secondary_icon_tooltip_text" translatable="yes">The name of the virus given to you by your antivirus. EX: Powerliks, Imuler, PVFlocker.</property>
-                    <property name="placeholder_text" translatable="yes">Name</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">4</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="primary_icon_tooltip_text" translatable="yes">The variant, generally a single uppercase letter. EX: A, B, C.</property>
-                    <property name="secondary_icon_tooltip_text" translatable="yes">The variant, generally a single uppercase letter. EX: A, B, C.</property>
-                    <property name="placeholder_text" translatable="yes">Variant</property>
-                    <property name="input_purpose">alpha</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">5</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
+                <property name="can_focus">True</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="name_box_label">
+                <property name="name">name_box_label</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Name in MalBox:</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="name_box">
+                <property name="name">name_box</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="file_box_label">
+                <property name="name">file_box_label</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">File:</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="file_box">
+                <property name="name">file_box</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
               </packing>
             </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">3</property>
+            <property name="position">2</property>
           </packing>
         </child>
       </object>

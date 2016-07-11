@@ -2,6 +2,9 @@ module MalBoxGUI where
 -- |GUI libraries
   import Graphics.UI.Gtk hiding (disconnect)
   import Graphics.UI.Gtk.Glade
+
+  import qualified MalBoxGUI
+  import Paths_MalBox(getDataFileName)
 -- |Start main code:
 main :: FilePath -> IO ()
 main gladepath = withSocketsDo $ handleSqlError $
