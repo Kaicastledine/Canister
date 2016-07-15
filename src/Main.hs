@@ -1,3 +1,3 @@
 module Main where
 
-  main = MalBoxGUI.main "malbox.glade"
+  main = CanisterGUI.main "canister.glade"

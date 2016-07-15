@@ -1,4 +1,4 @@
-##MalBox
+##Canister
 
 A malware sample storage system written in [Haskell](haskell.org).
 
