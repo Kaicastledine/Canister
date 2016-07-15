@@ -4,7 +4,7 @@ module CanisterGUI where
   import Graphics.UI.Gtk.Glade
 
   import qualified CanisterGUI
-  import Paths_Canister(getDataFileName)
+  import Paths_canister(getDataFileName)
 -- |Start main code:
 main :: FilePath -> IO ()
 main gladepath = withSocketsDo $ handleSqlError $
